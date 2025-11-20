@@ -7,23 +7,22 @@
   <title>ADGORITHM | Agencia de Marketing Digital y Desarrollo Web</title>
   
   <meta name="description" content="Adgorithm impulsa tu negocio local con ciencia y datos. Gestión de redes sociales, diseño web, cartas QR y estrategias de crecimiento para restaurantes y comercios.">
-  
   <meta name="keywords" content="Adgorithm, agencia marketing, diseño web, gestión redes sociales, carta digital QR, marketing para restaurantes, SEO local">
-  
   <meta name="author" content="ADGORITHM">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adgorithm.endracompany.com/">
   <meta property="og:title" content="ADGORITHM — Escala tu negocio con ciencia">
   <meta property="og:description" content="Marketing digital, webs y automatización para negocios locales. Sin humo, solo resultados medibles.">
-  <meta property="og:image" content="https://adgorithm.endracompany.com/public/about.jpg"> <link rel="preload" as="video" href="assets/hero_opt.webm" type="video/webm" crossorigin="">
+  <meta property="og:image" content="https://adgorithm.endracompany.com/public/about.jpg"> 
+  
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="./public/css2" rel="stylesheet">
   <link rel="stylesheet" href="./public/style.css">
 
-<link rel="icon" type="image/png" href="./public/logo.png">
-<link rel="shortcut icon" href="./public/logo.png">
+  <link rel="icon" type="image/png" href="./public/logo.png">
+  <link rel="shortcut icon" href="./public/logo.png">
   
   <link rel="canonical" href="https://adgorithm.endracompany.com/">
   <meta name="google-site-verification" content="FbCgLhZZDJG2xOr7DWpejJ1GIM0XSMEwxKdCm40ZPBs" />
@@ -50,21 +49,52 @@
   </header>
 
   <main id="inicio">
-    <section class="presentacion">
-      <video src="assets/hero.mp4" autoplay="" muted="" loop="" playsinline="" webkit-playsinline=""></video>
-      <div class="video-overlay"></div>
+    <section class="presentacion" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 65vh; min-height: 550px; position: relative; overflow: hidden;">
+      
+      <video src="./public/hero.mp4" autoplay muted loop playsinline 
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: blur(2px);">
+      </video>
+      
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 18, 32, 0.5); z-index: 1;"></div>
+      
+      <div style="position: relative; z-index: 2; padding: 0 20px; max-width: 900px;">
+        
+        <span style="color: #4dabf7; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; display: block; margin-bottom: 16px;">
+          Digitaliza • Automatiza • Crece
+        </span>
+
+        <h1 style="color: #ffffff; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1; margin: 0 0 24px 0; text-transform: uppercase; font-weight: 900; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          AGENCIA DE<br>MARKETING DIGITAL
+        </h1>
+        
+        <p style="color: #e0e0e0; font-size: 1.3rem; max-width: 600px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
+          Jóvenes emprendedores ayudando a negocios locales a brillar en el mundo digital con estrategias que funcionan.
+        </p>
+
+        <div style="margin-top: 32px;">
+           <a href="#contacto" style="background: white; color: #0047ff; padding: 14px 32px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+             Empezar ahora
+           </a>
+        </div>
+
+      </div>
     </section>
 
-    <section class="hero">
+    <section class="hero" style="background: #ffffff; padding-top: 60px;">
       <div class="wrap reveal reveal-delay-2 revealed">
         <div>
           <div class="eyebrow">Estrategia • Ciencia • Crecimiento</div>
-          <h1 class="reveal reveal-delay-3 revealed">Escala crecimiento con ciencia, no con suerte.</h1>
-          <p class="lead reveal reveal-delay-4 revealed">Gestión de redes, páginas web, flyers y cartas digitales con QR, orquestados con hipótesis, experimentos semanales y métricas que impactan tu negocio.</p>
+          <h2 class="reveal reveal-delay-3 revealed" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 20px; color: #0b1220;">
+            Escala crecimiento con ciencia, no con suerte.
+          </h2>
+          <p class="lead reveal reveal-delay-4 revealed">
+            Gestión de redes, páginas web, flyers y cartas digitales con QR, orquestados con hipótesis, experimentos semanales y métricas que impactan tu negocio.
+          </p>
           <div class="btns">
             <a class="btn primary reveal" href="#contacto">Agendar llamada</a>
           </div>
         </div>
+        
         <aside class="hero-card reveal reveal-delay-1 revealed">
           <h3 class="reveal reveal-delay-2 revealed">¿Por qué nosotros?</h3>
           <p class="reveal reveal-delay-3 revealed">Equipo ágil, enfoque de experimentación continua y material creativo listo para activar campañas que generen visitas, reservas y ventas.</p>
@@ -217,7 +247,6 @@
           <h2 style="font-size:clamp(1.5rem,2.5vw,2rem); line-height:1.2; margin:0; color:#30405a;">Prototipos Clientes</h2>
           
           <div class="grid-2" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-top:20px;">
-            
             <div class="prototipo" style="background:white; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
               <h3 style="margin-top:0; color:#0047ff;">The Boss Peluquería</h3>
               <p style="font-size:1rem; color:#555; margin:10px 0;">Web ligera con SEO local, optimización de Google Business Profile y reservas vía QR. Resultado: aumento notable en visibilidad y captación de citas.</p>
@@ -235,7 +264,6 @@
                  Ver prototipo
               </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -327,26 +355,53 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var c = document.getElementById('rrssChart'); if (!c) return;
+      var c = document.getElementById('rrssChart'); 
+      if (!c) return;
+      
       var ctx = c.getContext('2d');
+      
       new Chart(ctx, {
         type: 'bar',
         data: {
           labels: ['Básico (Starter)', 'Estándar (Crecimiento)', 'Premium (Pro)'],
           datasets: [
-            { label: 'Posts al Mes', data: [4,8,12], backgroundColor: 'rgba(0,71,255,0.35)', borderColor:'rgba(0,71,255,1)', borderWidth:1 },
-            { label: 'Reels al Mes', data: [2,4,6], backgroundColor: 'rgba(46,123,255,0.35)', borderColor:'rgba(46,123,255,1)', borderWidth:1 }
+            { 
+              label: 'Posts al Mes', 
+              data: [4, 8, 12], 
+              backgroundColor: 'rgba(0, 71, 255, 0.5)', 
+              borderColor: 'rgba(0, 71, 255, 1)', 
+              borderWidth: 1,
+              borderRadius: 4
+            },
+            { 
+              label: 'Reels al Mes', 
+              data: [2, 4, 6], 
+              backgroundColor: 'rgba(11, 18, 32, 0.8)', 
+              borderColor: 'rgba(11, 18, 32, 1)', 
+              borderWidth: 1,
+              borderRadius: 4
+            }
           ]
         },
-        options: { responsive:true, maintainAspectRatio:false, scales:{ y:{beginAtZero:true, ticks:{stepSize:2} } } }
+        options: { 
+          responsive: true, 
+          maintainAspectRatio: false, 
+          scales: { 
+            y: { beginAtZero: true, ticks: { stepSize: 2 } } 
+          },
+          plugins: {
+            legend: { position: 'bottom' }
+          }
+        }
       });
     });
   </script>
 
   <script src="./public/app.js.descarga"></script>
-  <script src="./public/chart.js.descarga"></script>
 
   <script>
     (function(){
@@ -362,12 +417,10 @@
       }
 
       form.addEventListener("submit", function(e){
-        // If the form has an action to an external URL, let the browser handle it normally
         var action = form.getAttribute("action") || "/";
         if (action && action.indexOf("http") === 0) return;
         e.preventDefault();
         var fd = new FormData(form);
-        // Netlify prefers a single string for checkbox groups
         var servicios = [];
         form.querySelectorAll('input[name="servicios"]:checked').forEach(function(i){ servicios.push(i.value); });
         var payload = {
@@ -394,7 +447,6 @@
   </script>
 
   <script>
-    // Force muted autoplay when allowed by the browser policy
     (function() {
       var videos = document.querySelectorAll('video');
       if (!videos.length) return;
@@ -410,11 +462,9 @@
       videos.forEach(function(v){
         tryPlay(v);
       });
-      // Retry when page becomes visible
       document.addEventListener('visibilitychange', function(){
         if (!document.hidden) videos.forEach(tryPlay);
       });
-      // As a last resort, first user scroll/gesture will trigger play
       ['touchstart','click','scroll'].forEach(function(evt){
         var fired = false;
         window.addEventListener(evt, function once(){
