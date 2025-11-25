@@ -126,7 +126,7 @@
 
         <h3 class="reveal">Gestión de Redes Sociales</h3>
         <div class="grid-3">
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 service-card" data-value="Gestión redes sociales">
             <div class="icon">📱</div>
             <h3 class="reveal reveal-delay-2">Básico (Starter)</h3>
             <p class="reveal reveal-delay-3"><strong>Desde 150 €</strong> / mes</p>
@@ -137,7 +137,7 @@
               <li>Respuesta a mensajes (2 horas/semana)</li>
             </ul>
           </div>
-          <div class="card reveal reveal-delay-4">
+          <div class="card reveal reveal-delay-4 service-card" data-value="Gestión redes sociales">
             <div class="icon">🚀</div>
             <h3 class="reveal">Estándar (Crecimiento)</h3>
             <p class="reveal reveal-delay-1"><strong>Desde 300 €</strong> / mes</p>
@@ -148,7 +148,7 @@
               <li>Informes con interacción activa</li>
             </ul>
           </div>
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 service-card" data-value="Gestión redes sociales">
             <div class="icon">⭐</div>
             <h3 class="reveal reveal-delay-3">Premium (Pro)</h3>
             <p class="reveal reveal-delay-4"><strong>Desde 600 €</strong> / mes</p>
@@ -161,7 +161,7 @@
           </div>
         </div>
 
-        <div class="card reveal" style="margin-top:16px;text-align:center;">
+        <div class="card reveal service-card" style="margin-top:16px;text-align:center;" data-value="Gestión redes sociales">
           <h3 class="reveal reveal-delay-1">Servicio Extra</h3>
           <p class="reveal reveal-delay-2">Añade 5 historias (Stories) por semana a cualquiera de tus paquetes por <strong>+100 € / mes</strong>.</p>
         </div>
@@ -175,19 +175,19 @@
 
         <h3 style="margin-top:24px;" class="reveal">Diseño Web y Digitalización</h3>
         <div class="grid-3">
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 service-card" data-value="Página web">
             <div class="icon">🌐</div>
             <h3 class="reveal reveal-delay-2">Web Básica (Presencial)</h3>
             <p class="reveal reveal-delay-3">Sitio web de 3 a 5 páginas (Inicio, Servicios, Contacto), ideal para potenciar tu imagen de marca y SEO local.</p>
             <p class="reveal reveal-delay-4"><strong>Desde 750 €</strong></p>
           </div>
-          <div class="card reveal">
+          <div class="card reveal service-card" data-value="Página web">
             <div class="icon">🛒</div>
             <h3 class="reveal reveal-delay-1">Web a Medida (E-commerce/CatálogO)</h3>
             <p class="reveal reveal-delay-2">Desarrollo de proyectos complejos, tiendas online con funcionalidades avanzadas como reservas y bases de datos.</p>
             <p class="reveal reveal-delay-3"><strong>Desde 1.500 €</strong></p>
           </div>
-          <div class="card reveal reveal-delay-4">
+          <div class="card reveal reveal-delay-4 service-card" data-value="Página web">
             <div class="icon">💳</div>
             <h3 class="reveal">E-commerce Profesional (Premium)</h3>
             <p class="reveal reveal-delay-1">Tienda online avanzada que incluye todas las funcionalidades de “Web a Medida”, más la integración y configuración de la pasarela de pago (TPV virtual) y formación inicial.</p>
@@ -196,13 +196,13 @@
         </div>
 
         <div class="grid-2" style="margin-top:16px;">
-          <div class="card reveal reveal-delay-3">
+          <div class="card reveal reveal-delay-3 service-card" data-value="Página web">
             <div class="icon">⚙️</div>
             <h3 class="reveal reveal-delay-4">Mejora/Optimización Web</h3>
             <p class="reveal">Auditoría y mejora de velocidad, usabilidad (UX) y estructura SEO de tu web actual para mejores resultados.</p>
             <p class="reveal reveal-delay-1"><strong>Desde 350 €</strong></p>
           </div>
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 service-card" data-value="Carta digital con QR">
             <div class="icon">📲</div>
             <h3 class="reveal reveal-delay-3">Menú QR Estático</h3>
             <p class="reveal reveal-delay-4">Digitalización de tu carta en PDF optimizado y generación de código QR de alta resolución.</p>
@@ -212,13 +212,13 @@
 
         <h3 style="margin-top:24px;" class="reveal reveal-delay-1">Diseño Gráfico Promocional</h3>
         <div class="grid-2">
-          <div class="card reveal reveal-delay-2">
+          <div class="card reveal reveal-delay-2 service-card" data-value="Diseño gráfico">
             <div class="icon">🖨️</div>
             <h3 class="reveal reveal-delay-3">Diseño de Flyer (Una Cara)</h3>
             <p class="reveal reveal-delay-4">Diseño de folleto publicitario (A6/A5) listo para impresión, entregado en alta resolución.</p>
             <p class="reveal"><strong>Desde 30 €</strong></p>
           </div>
-          <div class="card reveal reveal-delay-1">
+          <div class="card reveal reveal-delay-1 service-card" data-value="Diseño gráfico">
             <div class="icon">🪧</div>
             <h3 class="reveal reveal-delay-2">Diseño de Cartelería/Rótulo</h3>
             <p class="reveal reveal-delay-3">Diseño de carteles grandes, vinilos o materiales para la fachada de tu local. Consultar para presupuesto.</p>
@@ -311,8 +311,10 @@
               <legend style="font-weight:600;margin-bottom:6px;color:#30405a">Selecciona uno o más servicios</legend>
               <label><input type="checkbox" name="servicios" value="Gestión redes sociales"> Gestión redes sociales</label>
               <label><input type="checkbox" name="servicios" value="Página web"> Página web</label>
-              <label><input type="checkbox" name="servicios" value="Flyers promocionales"> Flyers promocionales</label>
+              <label><input type="checkbox" name="servicios" value="Diseño gráfico"> Diseño gráfico</label>
               <label><input type="checkbox" name="servicios" value="Carta digital con QR"> Carta digital con QR</label>
+              <label><input type="checkbox" name="servicios" value="Automatización"> Automatización</label>
+              <label><input type="checkbox" name="servicios" value="Otro"> Otro</label>
             </fieldset>
             
             <textarea name="mensaje" rows="5" placeholder="Cuéntanos objetivos..." required=""></textarea>
@@ -420,6 +422,8 @@
           status.innerHTML = "✅ ¡Gracias! Hemos recibido tu mensaje. Te contestaremos pronto.";
           status.style.color = "green";
           form.reset();
+          // Resetear tarjetas seleccionadas
+          document.querySelectorAll('.service-card').forEach(card => card.classList.remove('active'));
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
@@ -442,33 +446,47 @@
   </script>
 
   <script>
-    (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      // Video Autoplay
       var videos = document.querySelectorAll('video');
-      if (!videos.length) return;
-      function tryPlay(v){
-        if (!v) return;
-        v.muted = true;
-        v.setAttribute('muted', '');
-        var p = v.play();
-        if (p && typeof p.catch === 'function') {
-          p.catch(function(){ /* ignore */ });
+      if (videos.length) {
+        function tryPlay(v){
+          if (!v) return;
+          v.muted = true;
+          v.setAttribute('muted', '');
+          var p = v.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(function(){ /* ignore */ });
+          }
         }
+        videos.forEach(tryPlay);
+        document.addEventListener('visibilitychange', function(){
+          if (!document.hidden) videos.forEach(tryPlay);
+        });
+        ['touchstart','click','scroll'].forEach(function(evt){
+          var fired = false;
+          window.addEventListener(evt, function once(){
+            if (fired) return;
+            fired = true;
+            videos.forEach(tryPlay);
+          }, { once: true, passive: true });
+        });
       }
-      videos.forEach(function(v){
-        tryPlay(v);
+
+      // Lógica Tarjetas Interactivas (SIN SCROLL)
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(card => {
+        card.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const serviceName = this.getAttribute('data-value');
+          const checkbox = document.querySelector(`input[value="${serviceName}"]`);
+          if (checkbox) {
+            checkbox.checked = this.classList.contains('active');
+            // Eliminado el scroll automático
+          }
+        });
       });
-      document.addEventListener('visibilitychange', function(){
-        if (!document.hidden) videos.forEach(tryPlay);
-      });
-      ['touchstart','click','scroll'].forEach(function(evt){
-        var fired = false;
-        window.addEventListener(evt, function once(){
-          if (fired) return;
-          fired = true;
-          videos.forEach(tryPlay);
-        }, { once: true, passive: true });
-      });
-    })();
+    });
   </script>
 </body>
 </html>
