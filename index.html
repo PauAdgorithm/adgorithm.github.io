@@ -16,15 +16,12 @@
   <meta property="og:description" content="Marketing digital, webs y automatización para negocios locales. Sin humo, solo resultados medibles.">
   <meta property="og:image" content="https://adgorithm.es/public/about.jpg"> 
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://assets.calendly.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="./public/css2" rel="stylesheet">
   <link rel="stylesheet" href="./public/style.css">
   
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
   <link rel="icon" type="image/png" href="./public/logo.png">
   <link rel="shortcut icon" href="./public/logo.png">
@@ -59,30 +56,75 @@
   </script>
 
   <style>
-    /* Acordeones */
-    details { background: #ffffff; border: 1px solid #e1e8ff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.03); margin-bottom: 20px; transition: all 0.3s ease; }
-    summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 20px 25px; background: #ffffff; position: relative; z-index: 10; transition: background 0.2s; }
+    /* --- EFECTO TYPEWRITER --- */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: #4dabf7;
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* --- ACORDEONES --- */
+    details {
+      background: #ffffff;
+      border: 1px solid #e1e8ff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      margin-bottom: 20px;
+    }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 25px;
+      background: #ffffff;
+      position: relative;
+      z-index: 10;
+      transition: background 0.2s;
+    }
     summary:hover { background: #f8faff; }
     summary::-webkit-details-marker { display: none; }
     summary h2 { margin: 0; font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: #0b1220; font-weight: 700; }
-    .arrow-icon { width: 24px; height: 24px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230047ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .arrow-icon {
+      width: 24px; height: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230047ff'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-size: contain; background-repeat: no-repeat;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     details[open] .arrow-icon { transform: rotate(180deg); }
-    .accordion-wrapper { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .accordion-wrapper {
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     details[open] .accordion-wrapper { grid-template-rows: 1fr; }
     details.is-closing .accordion-wrapper { grid-template-rows: 0fr !important; }
     details.is-closing .arrow-icon { transform: rotate(0deg) !important; }
     .accordion-content { overflow: hidden; padding: 0 25px; }
-    .inner-padding { padding-bottom: 25px; padding-top: 10px; border-top: 1px solid #f4f6f8; opacity: 0; animation: fadeInContent 0.6s ease forwards; animation-delay: 0.1s; }
-    @keyframes fadeInContent { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .inner-padding { padding-bottom: 25px; padding-top: 10px; border-top: 1px solid #f4f6f8; }
+
+    /* Tarjetas Deshabilitadas */
     .service-card { transition: all 0.2s ease; }
-    .service-card.disabled { opacity: 0.4; pointer-events: none; filter: grayscale(80%); background-color: #f9f9f9; border-color: #eee; }
+    .service-card.disabled {
+      opacity: 0.4; pointer-events: none; filter: grayscale(80%);
+      background-color: #f9f9f9; border-color: #eee;
+    }
   </style>
 </head>
 <body>
   <header class="header">
     <div class="wrap nav">
       <a href="#inicio" class="brand reveal revealed">
-        <img src="./public/logo.png" alt="ADGORITHM logo" style="width:40px;height:40px;border-radius:12px;object-fit:contain" width="40" height="40">
+        <img loading="lazy" src="./public/logo.png" alt="ADGORITHM logo" style="width:40px;height:40px;border-radius:12px;object-fit:contain" class="reveal reveal-delay-1 revealed">
         <span>ADGORITHM</span>
       </a>
       <nav class="menu">
@@ -102,16 +144,17 @@
   <main id="inicio">
     <section class="presentacion" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 65vh; min-height: 550px; position: relative; overflow: hidden;">
       
-      <video src="./public/hero.mp4" autoplay muted loop playsinline preload="auto"
+      <video src="./public/hero.mp4" autoplay muted loop playsinline 
              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: blur(2px);">
       </video>
       
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 18, 32, 0.5); z-index: 1;"></div>
       
       <div style="position: relative; z-index: 2; padding: 0 20px; max-width: 900px;">
-        <span style="color: #4dabf7; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; display: block; margin-bottom: 16px;">
-          Digitaliza • Automatiza • Crece
-        </span>
+        
+        <div style="margin-bottom: 16px; min-height: 1.2em;">
+           <span id="typewriter-text" style="color: #4dabf7; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;"></span><span class="typewriter-cursor"></span>
+        </div>
 
         <h1 style="color: #ffffff; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1; margin: 0 0 24px 0; text-transform: uppercase; font-weight: 900; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
           AGENCIA DE<br>MARKETING DIGITAL
@@ -173,7 +216,7 @@
                     <p><strong>Trabajamos codo a codo con nuestros clientes, como si su negocio fuera el nuestro.</strong><br>Valoramos la transparencia, la mejora constante y la comunicación clara.<br>Nos encanta ver cómo un restaurante se llena, una peluquería gana citas, o una tienda recibe nuevos pedidos gracias a nuestras estrategias.</p>
                   </div>
                   <div class="card">
-                    <img loading="lazy" alt="Cliente feliz usando servicios" src="./public/about.jpg" style="border-radius: 12px;" width="400" height="300">
+                    <img loading="lazy" alt="Cliente feliz usando servicios" src="./public/about.jpg" style="border-radius: 12px;">
                   </div>
                 </div>
               </div>
@@ -439,15 +482,33 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-  <script src="./public/app.js.descarga" defer></script>
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./public/app.js.descarga"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
   <script>
-    // 1. Gráficas (Ahora con chequeo de librería cargada)
-    window.addEventListener('load', function () {
+    // 1. LÓGICA EFECTO TYPEWRITER
+    document.addEventListener('DOMContentLoaded', function() {
+      const text = "Digitaliza • Automatiza • Crece";
+      const speed = 100; // Velocidad en ms
+      let i = 0;
+      const target = document.getElementById("typewriter-text");
+      
+      function typeWriter() {
+        if (i < text.length) {
+          target.textContent += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      // Iniciar
+      typeWriter();
+    });
+
+    // 2. Gráficas
+    document.addEventListener('DOMContentLoaded', function () {
       var c = document.getElementById('rrssChart'); 
-      if (c && typeof Chart !== 'undefined') {
+      if (c) {
         var ctx = c.getContext('2d');
         new Chart(ctx, {
           type: 'bar',
@@ -461,7 +522,7 @@
       }
     });
 
-    // 2. Formulario AJAX
+    // 3. Formulario AJAX
     var form = document.getElementById("contact-form");
     async function handleSubmit(event) {
       event.preventDefault();
@@ -484,7 +545,7 @@
     }
     if(form) { form.addEventListener("submit", handleSubmit); }
 
-    // 3. Lógica General
+    // 4. Lógica General
     document.addEventListener('DOMContentLoaded', function() {
       // Video
       var videos = document.querySelectorAll('video');
@@ -506,7 +567,7 @@
             setTimeout(() => {
               el.removeAttribute('open');
               el.classList.remove('is-closing');
-            }, 500); // Tiempo acorde con la animación CSS
+            }, 500); 
           } else {
             el.setAttribute('open', '');
           }
