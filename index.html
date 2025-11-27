@@ -71,7 +71,7 @@
       50% { opacity: 0; }
     }
 
-    /* --- ACORDEONES --- */
+    /* --- ACORDEONES CON ANIMACIÓN SUAVE --- */
     details {
       background: #ffffff;
       border: 1px solid #e1e8ff;
@@ -102,22 +102,25 @@
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     details[open] .arrow-icon { transform: rotate(180deg); }
-    .accordion-wrapper {
-      display: grid; grid-template-rows: 0fr;
-      transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @keyframes expand {
+      from { grid-template-rows: 0fr; opacity: 0; }
+      to { grid-template-rows: 1fr; opacity: 1; }
     }
-    details[open] .accordion-wrapper { grid-template-rows: 1fr; }
-    details.is-closing .accordion-wrapper { grid-template-rows: 0fr !important; }
+    @keyframes collapse {
+      from { grid-template-rows: 1fr; opacity: 1; }
+      to { grid-template-rows: 0fr; opacity: 0; }
+    }
+    .accordion-wrapper { display: grid; grid-template-rows: 0fr; }
+    details[open] .accordion-wrapper { animation: expand 0.5s ease-out forwards; }
+    details.is-closing .accordion-wrapper { animation: collapse 0.5s ease-out forwards; }
     details.is-closing .arrow-icon { transform: rotate(0deg) !important; }
     .accordion-content { overflow: hidden; padding: 0 25px; }
     .inner-padding { padding-bottom: 25px; padding-top: 10px; border-top: 1px solid #f4f6f8; }
 
-    /* Tarjetas Deshabilitadas */
+    /* Tarjetas */
     .service-card { transition: all 0.2s ease; }
-    .service-card.disabled {
-      opacity: 0.4; pointer-events: none; filter: grayscale(80%);
-      background-color: #f9f9f9; border-color: #eee;
-    }
+    .service-card.disabled { opacity: 0.4; pointer-events: none; filter: grayscale(80%); background-color: #f9f9f9; border-color: #eee; }
   </style>
 </head>
 <body>
@@ -143,13 +146,10 @@
 
   <main id="inicio">
     <section class="presentacion" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 65vh; min-height: 550px; position: relative; overflow: hidden;">
-      
       <video src="./public/hero.mp4" autoplay muted loop playsinline 
              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: blur(2px);">
       </video>
-      
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 18, 32, 0.5); z-index: 1;"></div>
-      
       <div style="position: relative; z-index: 2; padding: 0 20px; max-width: 900px;">
         
         <div style="margin-bottom: 16px; min-height: 1.2em;">
@@ -159,17 +159,42 @@
         <h1 style="color: #ffffff; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1; margin: 0 0 24px 0; text-transform: uppercase; font-weight: 900; text-shadow: 0 10px 30px rgba(0,0,0,0.5);">
           AGENCIA DE<br>MARKETING DIGITAL
         </h1>
-        
         <p style="color: #e0e0e0; font-size: 1.3rem; max-width: 600px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
           Jóvenes emprendedores ayudando a negocios locales a brillar en el mundo digital con estrategias que funcionan.
         </p>
-
         <div style="margin-top: 32px;">
            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/adgorithm-info/30min'});return false;" style="background: white; color: #0047ff; padding: 14px 32px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-block; transition: transform 0.2s; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
              Empezar ahora
            </a>
         </div>
+      </div>
+    </section>
 
+    <section class="stats-section" style="background: #0b1220; padding: 40px 0; color: white; border-bottom: 1px solid #1f2a40;">
+      <div class="wrap">
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+          
+          <div class="stat-item">
+            <div class="stat-number" data-target="35" style="font-size: 2.5rem; font-weight: 800; color: #4dabf7; margin-bottom: 5px;">0</div>
+            <div class="stat-label" style="font-size: 0.9rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Proyectos lanzados</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="98" data-suffix="%" style="font-size: 2.5rem; font-weight: 800; color: #4dabf7; margin-bottom: 5px;">0</div>
+            <div class="stat-label" style="font-size: 0.9rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Clientes Satisfechos</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="35" data-suffix="%" style="font-size: 2.5rem; font-weight: 800; color: #4dabf7; margin-bottom: 5px;">0</div>
+            <div class="stat-label" style="font-size: 0.9rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Aumento medio de ROI</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="24" data-suffix="/7" style="font-size: 2.5rem; font-weight: 800; color: #4dabf7; margin-bottom: 5px;">0</div>
+            <div class="stat-label" style="font-size: 0.9rem; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px;">Soporte Técnico</div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -187,7 +212,6 @@
             <a class="btn primary reveal" href="#contacto">Ver planes</a>
           </div>
         </div>
-        
         <aside class="hero-card reveal reveal-delay-1 revealed">
           <h3 class="reveal reveal-delay-2 revealed">¿Por qué nosotros?</h3>
           <p class="reveal reveal-delay-3 revealed">Equipo ágil, enfoque de experimentación continua y material creativo listo para activar campañas que generen visitas, reservas y ventas.</p>
@@ -487,13 +511,12 @@
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
   <script>
-    // 1. LÓGICA EFECTO TYPEWRITER
+    // 1. TYPEWRITER
     document.addEventListener('DOMContentLoaded', function() {
       const text = "Digitaliza • Automatiza • Crece";
-      const speed = 100; // Velocidad en ms
+      const speed = 100;
       let i = 0;
       const target = document.getElementById("typewriter-text");
-      
       function typeWriter() {
         if (i < text.length) {
           target.textContent += text.charAt(i);
@@ -501,11 +524,46 @@
           setTimeout(typeWriter, speed);
         }
       }
-      // Iniciar
       typeWriter();
     });
 
-    // 2. Gráficas
+    // 2. ANIMACIÓN NÚMEROS
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.stat-number');
+      const speed = 200; 
+
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText.replace(/[^0-9]/g, ''); 
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const inc = target / speed;
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc) + suffix;
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target + suffix;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      const statsSection = document.querySelector('.stats-section');
+      if(statsSection) { observer.observe(statsSection); }
+    });
+
+    // 3. GRÁFICAS
     document.addEventListener('DOMContentLoaded', function () {
       var c = document.getElementById('rrssChart'); 
       if (c) {
@@ -522,7 +580,7 @@
       }
     });
 
-    // 3. Formulario AJAX
+    // 4. FORMULARIO AJAX
     var form = document.getElementById("contact-form");
     async function handleSubmit(event) {
       event.preventDefault();
@@ -545,7 +603,7 @@
     }
     if(form) { form.addEventListener("submit", handleSubmit); }
 
-    // 4. Lógica General
+    // 5. LÓGICA GENERAL
     document.addEventListener('DOMContentLoaded', function() {
       // Video
       var videos = document.querySelectorAll('video');
@@ -559,7 +617,6 @@
       // Acordeón Animado (SOLUCIÓN ROBUSTA KEYFRAMES)
       document.querySelectorAll('details.smooth-accordion').forEach((el) => {
         const summary = el.querySelector('summary');
-        
         summary.addEventListener('click', (e) => {
           e.preventDefault();
           if (el.hasAttribute('open')) {
@@ -567,7 +624,7 @@
             setTimeout(() => {
               el.removeAttribute('open');
               el.classList.remove('is-closing');
-            }, 500); 
+            }, 500); // Tiempo acorde con la animación CSS
           } else {
             el.setAttribute('open', '');
           }
